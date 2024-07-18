@@ -12,9 +12,8 @@ model = keras.Sequential([
     keras.layers.Flatten(input_shape=(28, 28)),  # Flatten the 28x28 input images
     keras.layers.Dense(128, activation='relu'),  # Hidden layer with 128 neurons and ReLU activation
     keras.layers.Dropout(0.2),                  # Dropout layer to reduce overfitting
-    keras.layers.Dense(10, activation='softmax') # Output layer with 10 neurons (for 0-9 digits)
-])
-
+    keras.layers.Dense(10, activation='softmax') # Output layer with 10 neurons (for 0-9 digits)])
+    
 # Compile the model
 model.compile(optimizer='adam',
               loss='sparse_categorical_crossentropy',
